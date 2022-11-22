@@ -1,6 +1,7 @@
 import {useEffect} from 'react';
+import {connect} from 'react-redux';
 
-const RestaurantList = ({loadRestaurants, restaurants}) => {
+export const RestaurantList = ({loadRestaurants, restaurants}) => {
   useEffect(() => {
     loadRestaurants();
   }, [loadRestaurants]);
@@ -14,4 +15,8 @@ const RestaurantList = ({loadRestaurants, restaurants}) => {
   );
 };
 
-export default RestaurantList;
+const mapStateToProps = state => ({
+  restaurants: state.restaurants.records,
+});
+
+export default connect(mapStateToProps)(RestaurantList);
