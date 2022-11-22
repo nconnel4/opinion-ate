@@ -3,7 +3,7 @@ describe('Listing Restaurants', () => {
     const sushiPlace = 'Sushi Place';
     const pizzaPlace = 'Pizza Place';
 
-    cy.intercept('GET', 'https://api.outside.in/*/restaurants', [
+    cy.intercept('GET', 'https://api.outsidein.dev/*/restaurants', [
       {id: 1, name: sushiPlace},
       {id: 2, name: pizzaPlace},
     ]);
