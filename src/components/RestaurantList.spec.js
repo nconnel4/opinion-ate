@@ -19,7 +19,6 @@ describe('RestaurantList', () => {
 
     render(<RestaurantList {...props} />);
   }
-
   it('loads restaurants on first render', () => {
     renderComponent();
     expect(loadRestaurants).toHaveBeenCalled();
